@@ -12,7 +12,11 @@ function countToNumber(userNumber) {
 
 function numReplace(count) {
   for (let i = 0; i < count.length; i++) {
-    if (String(count[i]).includes("1")) {
+    if (String(count[i]).includes("2")) {
+      count[i] = "Boop!";
+    }
+
+    else if (String(count[i]).includes("1")) {
       count[i] = "Beep!";
     }
   }

@@ -27,3 +27,9 @@ Describe: numReplace
   countToZero(10);
   numReplace(count);
   Expected Output: [0, 'Beep!' 2, 3, 4, 5, 6, 7, 8, 9, 'Beep!']
+
+  Test: "It should replace all numbers containing 2 with 'Boop!'."
+  Code:
+  countToZero(20);
+  numReplace(count);
+  Expected Output: [0, 'Beep!', 'Boop!', 3, 4, 5, 6, 7, 8, 9, 'Beep!', 'Beep!', 'Boop!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Beep!', 'Boop!']
