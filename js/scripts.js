@@ -1,31 +1,38 @@
-/*Business Logic*/
 window.onload = function() {
-
-  Form.onsubmit = function(event) {
-  event.preventDefault();
   let count = [];
 
-    function countToNumber(userNumber) {
-      for (let i = userNumber; i >= 0; i--) {
-        count.push(i);
-      }
-      count.reverse();
-      console.log(count);
+  function countToNumber(userNumber) {
+    for (let i = userNumber.value; i >= 0; i--) {
+      count.push(i);
     }
-
-    function numReplace(count) {
-      for (let i = 0; i < count.length; i++) {
-        if (String(count[i]).includes("3")) {
-          count[i] = "Won't you be my neighbor?";
-        }
-        else if (String(count[i]).includes("2")) {
-          count[i] = "Boop!";
-        }
-        else if (String(count[i]).includes("1")) {
-          count[i] = "Beep!";
-        }
-      }
-      console.log(count);
-    }
+    count.reverse();
+    return count;
   }
-};
+
+  function numReplace(count) {
+    let newCount = [];
+    for (let i = 0; i < count.length; i++) {
+      if (String(count[i]).includes("3")) {
+        newCount.push("Won't you be my neighbor?");
+      }
+      else if (String(count[i]).includes("2")) {
+        newCount.push("Boop!");
+      }
+      else if (String(count[i]).includes("1")) {
+        newCount.push("Beep!");
+      } else {
+        newCount.push(count[i]);
+      }
+    }
+    return newCount.join(', ');
+  }
+
+  const form = document.querySelector("form");
+  form.onsubmit = function(event) {
+    event.preventDefault();
+    let userNumber = document.getElementById("userNumber");
+    count = countToNumber(userNumber);
+    let result = document.getElementById("result");
+    result.innerText = numReplace(count);  
+  }
+}
