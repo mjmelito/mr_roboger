@@ -19,3 +19,11 @@ Describe: countToNumber()
   Code:
   countToZero(x);
   Expected Output: [0, 1, 2, 3, ... x]
+
+Describe: numReplace
+
+  Test: "It should replace all numbers containing 1 with 'Beep!'."
+  Code:
+  countToZero(10);
+  numReplace(count);
+  Expected Output: [0, 'Beep!' 2, 3, 4, 5, 6, 7, 8, 9, 'Beep!']
