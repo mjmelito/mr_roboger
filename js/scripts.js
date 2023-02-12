@@ -1,7 +1,6 @@
 window.onload = function() {
 
-/*Business Logic*/
-
+  /*Business Logic*/
 
   function countToNumber(userNumber) {
     let count = [];
@@ -29,7 +28,8 @@ window.onload = function() {
     }
     return newCount.join(', ');
   }
-/*UI Logic*/
+
+  /*UI Logic*/
 
   const form = document.querySelector("form");
   form.onsubmit = function(event) {
