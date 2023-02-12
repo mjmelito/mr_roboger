@@ -1,3 +1,37 @@
+# Matthew Melito Mr. Roboger's Neighborhood
+
+#### By Matthew Melito
+
+#### A unique counting tool that doubles as a dialogue generator for a cyberpunk Mr. Roger's Neighborhood reboot.
+
+## Technologies Used
+
+* HTML
+* CSS
+* JavaScript
+
+## Description
+
+This site allows users to input any whole number, and will return a list of numbers counting up to that number. It will then replace any integer including a 1, 2, or 3 with pre-chosen text to form a robotic but neighborly language. 
+
+## Setup/Installation Requirements
+
+* Clone this repository to your desktop.
+* Navigate to the top level of the directory.
+* Open index.html in your browser.
+
+## Known Bugs
+
+None
+
+## License
+
+*This project uses the following license: [MIT](https://opensource.org/licenses/MIT)*
+
+Copyright (c) 2023
+**_Matthew Melito_**
+
+
 Describe: countToNumber()
 
   Test: "It should count down from 1 to 0."
