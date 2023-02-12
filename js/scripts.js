@@ -1,7 +1,10 @@
 window.onload = function() {
-  let count = [];
+
+/*Business Logic*/
+
 
   function countToNumber(userNumber) {
+    let count = [];
     for (let i = userNumber.value; i >= 0; i--) {
       count.push(i);
     }
@@ -26,13 +29,16 @@ window.onload = function() {
     }
     return newCount.join(', ');
   }
+/*UI Logic*/
 
   const form = document.querySelector("form");
   form.onsubmit = function(event) {
     event.preventDefault();
+    let count = [];
     let userNumber = document.getElementById("userNumber");
     count = countToNumber(userNumber);
     let result = document.getElementById("result");
+    result.innerText = ' ';
     result.innerText = numReplace(count);  
   }
 }
